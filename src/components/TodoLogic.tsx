@@ -1,6 +1,4 @@
 import { useReducer, useRef } from "react";
-import Ui from "./Ui";
-import Items from "./Items";
 
 type Todo = {
   id: number;
@@ -66,18 +64,7 @@ export default function TodoLogic() {
 
   return (
     <>
-      <Ui inputRef={inputRef} onAdd={handleAdd} />
 
-      <div className="flex flex-col items-center">
-        {current.map((todo) => (
-          <Items
-            key={todo.id}
-            todo={todo}
-            onToggle={lineThrough}
-            onRemove={removeTodo}
-          />
-        ))}
-      </div>
     </>
   );
 }
