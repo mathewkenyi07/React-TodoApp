@@ -1,5 +1,11 @@
+type UiProps = {
+  input: string;
+  setInput: (value: string) => void;
+  addItem: () => void;
+};
 
-export default function Ui() {
+
+export default function Ui({ input, setInput, addItem }:UiProps) {
   return (
     <>
       <div className="flex items-center justify-center text-6xl mb-[100px] text-neutral-200 font-bold text-[150px]">
@@ -14,12 +20,14 @@ export default function Ui() {
             placeholder="Add todo..."
             className="outline-none"
             value= {input}
-            onChange={(event)=>setResult(event.target.value)}
+            onChange={(event)=>setInput(event.target.value)}
             />
 
           <button
             type="button"
-            className="flex justify-center rounded-full bg-green-500 h-7 w-7 items-center" onClick={()=>{addItem}} >+</button>
+            className="flex justify-center rounded-full bg-green-500 h-7 w-7 items-center" 
+            onClick={addItem}
+            >+</button>
         </div>
       </div>
     </>
