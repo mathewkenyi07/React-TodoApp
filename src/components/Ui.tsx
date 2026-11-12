@@ -1,5 +1,4 @@
 
-
 export default function Ui() {
   return (
     <>
@@ -13,11 +12,14 @@ export default function Ui() {
   
             type="text"
             placeholder="Add todo..."
-            className="outline-none"/>
+            className="outline-none"
+            value= {input}
+            onChange={(event)=>setResult(event.target.value)}
+            />
 
           <button
             type="button"
-            className="flex justify-center rounded-full bg-green-500 h-7 w-7 items-center">+</button>
+            className="flex justify-center rounded-full bg-green-500 h-7 w-7 items-center" onClick={()=>{addItem}} >+</button>
         </div>
       </div>
     </>

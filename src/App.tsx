@@ -1,12 +1,9 @@
-import Ui from "./components/Ui";
-import Items from "./components/Items";
+import TodoLogic from "./components/TodoLogic";
 export default function App() {
   return (
     <>
-      <Ui />
-      <Items placeholder = "IAm Here"/>
-      <Items placeholder = "reactjsexample.com"/>
-      <Items placeholder = "A todo App developed with react"/>
+    <TodoLogic />
+    
     </>
   );
 }
