@@ -47,9 +47,8 @@ export default function TodoLogic() {
 
   function deleteItem (index: number){
    
-      setResult(results.splice(index,index+1));
 
-  }
+       setResult(results.filter((item, i) => {return i !== index;}));}
 
 
   return (

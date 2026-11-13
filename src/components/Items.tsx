@@ -16,10 +16,10 @@ export default function Items(props: ItemsProps) {
             type="checkbox"
             checked={props.completed}
             onChange={props.lineThrough}
-            className="h-4 w-4 cursor-pointer"
+            className="h-4 w-4 cursor-pointer shrink-0"
           />
 
-          <p className={props.completed ? "line-through text-black-500" : ""}>
+           <p className={props.completed ? "line-through text-black-500" : ""}>
             {props.placeholder}
           </p>
         </div>
@@ -27,7 +27,7 @@ export default function Items(props: ItemsProps) {
         <button
           type="button"
           onClick={props.deleteItem}
-          className="flex h-6 w-6 items-center justify-center rounded-full">
+          className="flex h-6 w-6 items-center justify-center shrink-0 rounded-full">
           <img src={trash} alt="Delete todo" />
         </button>
       </div>
